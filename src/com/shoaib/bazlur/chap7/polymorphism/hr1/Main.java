@@ -5,7 +5,8 @@ import com.shoaib.bazlur.chap7.polymorphism.hr0.HrManager;
 
 public class Main {
     public static void main(String[] args) {
-        com.shoaib.bazlur.chap7.polymorphism.hr0.HrManager hrManager = new HrManager();
+        PayCalculator calculator = new FixedPayCalculator(75);
+        HrManager hrManager = new HrManager();
 
         Client client0 = new Client("Mosharraf", 45);
         hrManager.addClient(client0);
