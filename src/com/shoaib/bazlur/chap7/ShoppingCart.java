@@ -3,19 +3,19 @@ package com.shoaib.bazlur.chap7;
 import java.util.ArrayList;
 
 public class ShoppingCart {
-    private ArrayList<Product> products = new ArrayList<>();
+    private ArrayList<AbstractProduct> products = new ArrayList<>();
 
-    public void addProduct(Product product) {
+    public void addProduct(AbstractProduct product) {
         products.add(product);
     }
 
-//    public int getTotalPrice() {
-//        int totalPrice = 0;
-//        for (Product product : products) {
-//            totalPrice += product.getPrice();
-//        }
-//        return totalPrice;
-//    }
+    public int getTotalPrice() {
+        int totalPrice = 0;
+        for (AbstractProduct product : products) {
+            totalPrice += product.calculatePrice();
+        }
+        return totalPrice;
+    }
 
     @Override
     public String toString() {
