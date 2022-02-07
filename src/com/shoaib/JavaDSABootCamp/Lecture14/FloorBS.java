@@ -1,15 +1,16 @@
 package com.shoaib.JavaDSABootCamp.Lecture14;
 
-public class CeilingBS {
+public class FloorBS {
     public static void main(String[] args) {
         int[] arr = {-18, -12, -4, 0, 2, 4, 15, 16, 18, 22, 45};
-       // int[] arr = {99, 80, 75, 22, 11, 10, 8, 6, 3, 1};
+        // int[] arr = {99, 80, 75, 22, 11, 10, 8, 6, 3, 1};
         int target = 3;
         int ans = ceilingBS(arr, target);
         System.out.println("Target found at index: " + ans);
     }
 
     static int ceilingBS(int[] arr, int target) {
+
         int start = 0;
         int end = arr.length - 1;
         //int ceiling = 0;
@@ -47,6 +48,6 @@ public class CeilingBS {
             //ceiling = mid + 1;
         }
 
-        return start;
+        return end;
     }
 }
